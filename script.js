@@ -1,35 +1,69 @@
-const searchQuery = document.querySelector(".searchQuery");
+const form = document.querySelector(".forms");
+const forms = document.querySelector(".formm");
+const email = document.querySelector("#email");
+const mailError = document.querySelector("#_email");
+const passError = document.querySelector("#_password");
+const password = document.querySelector("#password");
+const emails = document.querySelector("#emails");
+const emailsErro = document.querySelector("#emails");
 
-const after = document.querySelector(".after");
-const aftermobile = document.querySelector(".aftermobile");
-
-console.log("fater", aftermobile);
-
-searchQuery.addEventListener("mouseover", () => {
-  after.classList.add("slide");
-  aftermobile.style.visibility = "hidden";
+console.log(form);
+console.log(forms);
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  showErro();
+  showsErro();
 });
-
-searchQuery.addEventListener("mouseout", () => {
-  after.classList.remove("slide");
-  //   after.classList.add("slideOut");
+email.addEventListener("input", () => {
+  console.log("Helo");
+  showErro();
 });
-
-const hambugger = document.querySelector(".hambugger");
-const container__navigation = document.querySelector(".container__navigation");
-const icon = document.querySelector(".icon");
-const bars = document.querySelector(".bars");
-
-const mobilecontainer = document.querySelector(".mobilecontainer");
-
-hambugger.addEventListener("click", () => {
-  if (mobilecontainer.classList.contains("hide")) {
-    mobilecontainer.classList.remove("hide");
-    icon.classList.remove("icon");
-    bars.classList.add("show");
+function showErro() {
+  if (email.value === "") {
+    mailError.textContent = "Please enter a value";
+    setTimeout(() => {
+      mailError.textContent = "";
+    }, 2000);
+  } else if (email.validity.typeMismatch) {
+    mailError.textContent = "Please enter a valid email address";
   } else {
-    mobilecontainer.classList.add("hide");
-    icon.classList.add("icon");
-    bars.classList.remove("show");
+    mailError.textContent = "";
   }
+}
+
+forms.addEventListener("submit", (e) => {
+  e.preventDefault();
+  showError();
 });
+
+emails.addEventListener("input", () => {
+  console.log("Helo");
+  showError();
+});
+function showError() {
+  if (emails.value === "") {
+    emailsErro.textContent = "Please enter a value";
+  } else if (emails.validity.typeMismatch) {
+    emailsErro.textContent = "Please enter a valid email address";
+  } else {
+    emailsErro.textContent = "";
+  }
+}
+
+password.addEventListener("input", () => {
+  console.log("Helo");
+  showsErro();
+});
+
+function showsErro() {
+  if (password.value === "") {
+    passError.textContent = "please enter a password";
+    setTimeout(() => {
+      mailError.textContent = "";
+    }, 2000);
+  } else if (password.value > 5) {
+    passError.textContent = "Password should not be less  then 5";
+  } else {
+    passError.textContent = "";
+  }
+}

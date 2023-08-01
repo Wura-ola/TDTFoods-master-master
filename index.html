@@ -23,6 +23,82 @@
   </head>
   <body>
     <!-- hero section -->
+    <div class="zam">
+      <nav class="main_hero1">
+        <div>
+          <img src="./images/Logo (1).png" alt="" />
+        </div>
+        <div class="inppt">
+          <div>
+            <p>
+              All Categories
+              <img src="./images/li_chevron-down.png" alt="" />
+            </p>
+          </div>
+
+          <div class="form">
+            <form action="">
+              <input type=" " placeholder="Search for items" />
+              <button><img src="./images/li_search.png" alt="" /></button>
+            </form>
+          </div>
+        </div>
+        <div>
+          <img src="./images/Wishlist.png" alt="" />
+        </div>
+        <div>
+          <img src="./images/Cart.png" alt="" />
+        </div>
+        <div class="Ellipse">
+          <img src="./images/Ellipse 2.png" alt="" />
+          <div>Ramzi cherif</div>
+          <img src="./images/li_chevron-down.png" alt="" />
+        </div>
+        <div></div>
+      </nav>
+
+      <section class="main_hero1">
+        <div class="bros">
+          <img src="" alt="" />
+          <p>Brows All Categories</p>
+        </div>
+        <div class="deals">
+          <div>
+            <img src="./images/Frame (10).png" alt="" />
+            <span>Home</span>
+          </div>
+
+          <div>
+            <img src="./images/hot deals 1.png" alt="" />
+            <p>Hot deals</p>
+          </div>
+          <div>
+            <img src="./images/li_percent.png" alt="" />
+            <p>Promotions</p>
+          </div>
+          <div>
+            <img src="./images/li_megaphone.png" alt="" />
+            <p>New Products</p>
+          </div>
+        </div>
+
+        <div>
+          <img src="" alt="" />
+          <div><span>1233-7777</span> 24/7 support center</div>
+        </div>
+      </section>
+    </div>
+<!-- 
+    <div class="mobile-toggler'">
+      <div>
+        <img src="./images/Logo (1).png" alt="" />
+      </div> -->
+
+      <div class="ham"></div>
+      <div class="ham"></div>
+      <div class="ham"></div>
+    </div>
+
     <div class="hero_container">
       <div class="main_hero">
         <div class="">
@@ -30,10 +106,15 @@
             <h2>Don't miss our daily</h2>
             <h3>amazing deals.</h3>
             <p>save up to 60% on your first order</p>
-            <div>
-              <input type="text" placeholder="Enter your email address" />
+            <form class="formm">
+              <input
+                type="email"
+                id="emails"
+                placeholder="Enter your email address"
+              />
               <button>Subscribe</button>
-            </div>
+            </form>
+            <p id="_emails"></p>
           </div>
         </div>
         <div class="hero_second_section">
@@ -260,16 +341,27 @@
           <h2>10% OFF</h2>
           <p>For new member sign up at the first time</p>
         </div>
-        <form action="">
+
+        <form class="forms" action="" onsubmit="return showErro">
           <div>
-            <label for="">Email address</label>
-            <input type="email" placeholder="johndoe@gmail.com" />
+            <label for="email">Email address</label>
+            <input
+              id="email"
+              placeholder="johndoe@gmail.com"
+              type="email"
+              autocomplete="off"
+              onfocus="true"
+            />
           </div>
+          <p id="_email" name="errorMessage"></p>
           <div>
-            <label for="">Password</label>
-            <input type="email" placeholder="johndoe@gmail.com" />
+            <label for="password">Password</label>
+            <input type="password" placeholder="............." id="password" />
           </div>
-          <button class="cart_button2">Register Now</button>
+          <p id="_password" name="errorMessage"></p>
+          <button type="submit" id="_submit" class="cart_button2">
+            Register Now
+          </button>
         </form>
       </div>
     </div>
@@ -408,8 +500,8 @@
         </div>
       </div>
     </div>
-    <div class="app main_hero1">
-      <div class="app_first_section">
+    <div class="app">
+      <div class="app_first_section main_hero2">
         <div>
           <h1>Shop Faster With</h1>
           <h1>Groceyish App</h1>
@@ -427,7 +519,7 @@
     <div class="second_app main_hero1">
       <div class="second_app_section_one">
         <div>
-          <img src="./images/svgexport-6 (2) 1.png" alt="" />
+          <img src="./images/svgexport-6 (2) 1.png" alt="" f/>
         </div>
         <div>
           <h3>Best Price & Deals</h3>
@@ -453,6 +545,56 @@
         </div>
       </div>
     </div>
+    <div class="main_footer main_hero1">
+      <div class="footer_sec1">
+        <img src="./images/Logo (1).png" alt="" />
+        <div class="secs">
+          <img src="./images/Vector (Stroke).png" alt="" />
+          <div>Adress 1762 School House Road</div>
+        </div>
+        <div class="secs">
+          <img src="./images/Vector (Stroke).png" alt="" />
+          <div>Call Us: 1253-777</div>
+        </div>
+        <div class="secs">
+          <img src="./images/Vector (Stroke).png" alt="" />
+          <div>Email groceyfish@contact.com</div>
+        </div>
+        <div class="secs">
+          <img src="./images/Vector (Stroke).png" alt="" />
+          <div>Work Hour 8:00-20:00.Sunday-Thursday</div>
+        </div>
+      </div>
+      <div class="footer_sec2">
+        <h3>Account</h3>
+        <div>Wishlist</div>
+        <div>Cart</div>
+        <div>Track Order</div>
+        <div>Shopping Details</div>
+      </div>
+      <div class="footer_sec3">
+        <h3>Useful Link</h3>
+        <div>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_sec4">
+        <h3>Help Center</h3>
+        <div>Payment</div>
+        <div>Refund</div>
+        <div>Checkout</div>
+        <div>Shopping</div>
+        <div>Q&A</div>
+        <div>Privacy Policy</div>
+      </div>
+    </div>
+    <hr />
     <div class="footer main_hero1">
       <div>
         <img src="./images/© 2022, All rights reserved.png" alt="" />
