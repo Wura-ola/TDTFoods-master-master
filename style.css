@@ -12,7 +12,9 @@ nav {
   /* background-color: green; */
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
 }
-
+.navbar-logo {
+  display: none;
+}
 .inppt {
   padding: top 0px;
   /* background-color: #f3f3f3; */
@@ -84,12 +86,58 @@ a {
   display: none;
 }
 @media screen and (max-width: 768px) {
+  .deals {
+    flex-direction: column;
+    align-items: start;
+  }
+  .navbar-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background: white;
+
+    padding-left: 2rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    z-index: 10;
+    transition: 0.25s;
+  }
   nav {
-    display: none;
+    padding-top: 5rem;
+    flex-direction: column;
+    align-items: start;
+  }
+  nav div {
+    margin-bottom: 2rem;
+  }
+  section div {
+    margin-bottom: 2rem;
   }
   section {
-    display: none;
+    align-items: start;
+
+    flex-direction: column;
   }
+  .navbar-nav {
+    left: 80;
+  }
+  .navbar-nav.active {
+    left: 0;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar-logo {
+    display: block;
+  }
+  /* section {
+    display: none;
+  } */
   .ham {
     /* text-align: left; */
     width: 30px;
@@ -98,18 +146,36 @@ a {
     background-color: rgb(6, 0, 0);
     display: block;
   }
-}
-@media screen and (max-width: 376px) {
-  /* .ham {
-    margin-left: 92%;
-  } */
-}
-@media screen and (max-width: 320px) {
-  /* .ham {
-    margin-left: 90%;
-  } */
-}
+  .mobile-nav-brand {
+    display: flex;
+    /* justify-content: space-between; */
+    position: absolute;
+    right: 50px;
+    left: 20px;
+    top: 30px;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 30rem; */
+  }
+  #close-btn {
+    color: #000;
+    background-color: #000;
+  }
 
+  .mobile-nav-brand .close-btn {
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 425px) {
+  .mobile-nav-brand > a > img {
+    width: 70%;
+    /* background-color: red; */
+  }
+  .inppt {
+    flex-direction: column;
+    align-items: start;
+  }
+}
 .main_hero2 {
   margin-left: 29px;
 }
@@ -129,6 +195,7 @@ a {
 
 .hero_container {
   background-color: #c5ead9;
+  width: 100%;
 }
 .indicator {
   margin-bottom: 3rem;
